@@ -21,8 +21,10 @@
 5. `sudo dnf -y install dnf-automatic podman podman-docker virt-v2v dnf-plugins-core cockpit cockpit-system cockpit-podman cockpit-machines cockpit-storaged`
 6. `sudo systemctl enable --now cockpit.socket`
 7. `sudo ln -s /usr/libexec/docker/cli-plugins/docker-compose /usr/local/bin/docker-compose`
-8. `sudo firewall-cmd --remove-service=dhcpv6-client --permanent`
-9. `sudo firewall-cmd --reload`
+
+### Remove DHCPv6:
+1. `sudo firewall-cmd --remove-service=dhcpv6-client --permanent`
+2. `sudo firewall-cmd --reload`
 
 ### Configure automatic updates:
 1. Update `sudo vi /etc/dnf/automatic.conf`
