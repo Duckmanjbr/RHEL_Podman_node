@@ -35,5 +35,10 @@
 1. `sudo systemctl enable --now podman.socket`
 2. `systemctl --user enable --now podman.socket`
 3. We also need to define and export the DOCKER_HOST environment variable. The traditional way to do this is by adding the line below to ~/.bash_profile or ~/.profile, depending on the shell we are using:
-- `export DOCKER_HOST=unix:///run/user/1000/docker.sock`
+- `echo "export DOCKER_HOST=unix:///run/user/1000/docker.sock" >> .bash_profile`
 4. `source ~/.bash_profile`
+5. Add port allowances to the server:
+  - a. `sudo vi /etc/sysctl.conf`
+  - b. append "net.ipv4.ip_unprivileged_port_start=53" 
+6. `sudo sysctl --system`
+
