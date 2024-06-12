@@ -1,16 +1,13 @@
 ## Configuration setup:
 
-### Set static IP
+### Set static network details
 1. `sudo nmtui`
-
-### Name the server
-1. `sudo hostnamectl set-hostname {name}`
+   - set network connections
+   - set hostname
 
 ### Set timezone and verify time is being syncd from NTP 
-1. `sudo timedatectl set-timezone UTC`
-2. `sudo vi /etc/chrony.conf`
-3. `sudo systemctl restart chronyd`
-4. `sudo timedatectl status` and `sudo chronyc sources`
+1. `sudo timedatectl set-timezone CST6CDT` #Set timezone
+2. `sudo timedatectl status` and `sudo chronyc sources` #Test time sync
 
 ### Create folder structure for containers/VMs
 1. 'mkdir /home/duckman/containers /home/duckman/vms'
