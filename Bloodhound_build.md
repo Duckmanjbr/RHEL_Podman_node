@@ -14,7 +14,7 @@
 
 ## Set Volatile BMC IP Address:
 Note: All settings through console connections are not persistent!  Interface designations could be different on hardware (eth0/end0).
-1. 'ifconfig eth0 up "<ipaddress>" netmask "<subnet>"'
+1. 'ifconfig eth0 up "ipaddress" netmask "subnet"'
 
 
 ## BMC Web Interface:
