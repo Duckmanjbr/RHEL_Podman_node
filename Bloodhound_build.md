@@ -8,8 +8,8 @@
 
 
 ## Default Login:
-Login: root
-Password: 0penBmc
+- Login: root
+- Password: 0penBmc
 
 
 ## Set Volatile BMC IP Address:
