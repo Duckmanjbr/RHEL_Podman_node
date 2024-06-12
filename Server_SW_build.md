@@ -18,8 +18,17 @@
 2. 'curl -LO https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-linux-x86_64'
 3. 'chmod +x docker-compose-linux-x86_64'
 4. 'sudo mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose'
-5. 'sudo dnf -y install podman podman-docker virt-v2v dnf-plugins-core'
-6. 'sudo ln -s /usr/libexec/docker/cli-plugins/docker-compose /usr/local/bin/docker-compose'
+5. 'sudo dnf -y install dnf-automatic podman podman-docker virt-v2v dnf-plugins-core cockpit cockpit-system cockpit-podman cockpit-machines cockpit-storaged'
+6. `sudo systemctl enable --now cockpit.socket`
+7. 'sudo ln -s /usr/libexec/docker/cli-plugins/docker-compose /usr/local/bin/docker-compose'
+8. `sudo firewall-cmd --remove-service=dhcpv6-client --permanent`
+9. `sudo firewall-cmd --add-service=cockpit --permanent`
+10. `sudo firewall-cmd --reload`
+
+### Configure automatic updates. 
+1. Update `sudo vi /etc/dnf/automatic.conf`
+2. Change the upgrade type from `upgrade_type = default` to security patches only with `upgrade_type = security`
+3. `sudo systemctl enable dnf-automatic-install.timer`
 
 ### Setup Podman
 1. 'sudo systemctl enable --now podman.socket'
