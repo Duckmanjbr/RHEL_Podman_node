@@ -22,8 +22,7 @@
 6. `sudo systemctl enable --now cockpit.socket`
 7. 'sudo ln -s /usr/libexec/docker/cli-plugins/docker-compose /usr/local/bin/docker-compose'
 8. `sudo firewall-cmd --remove-service=dhcpv6-client --permanent`
-9. `sudo firewall-cmd --add-service=cockpit --permanent`
-10. `sudo firewall-cmd --reload`
+9. `sudo firewall-cmd --reload`
 
 ### Configure automatic updates. 
 1. Update `sudo vi /etc/dnf/automatic.conf`
