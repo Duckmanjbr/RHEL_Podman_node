@@ -23,8 +23,8 @@ Once IP address is set through serial BMC login to the web console and set all s
 
 ## Load Virtual Media or bootable USB:
 1. Virtual Media:
-  a. Load required virtual media ISO
-  b. Start vitual media
+  - a. Load required virtual media ISO
+  - b. Start vitual media
 2. Plug-in USB
 
 
@@ -33,7 +33,7 @@ Once IP address is set through serial BMC login to the web console and set all s
 2. Select proper boot device in BIOS
 3. Power on server
 4. Edit the 'Install Rocky Linux x.x' selection to add the following:
-  a. Remove the 'quite' flag
-  b. Add 'console=ttyS0, 115200' #This allows for the Serial Over LAN(SOL) conection from the web interface.
-  c. Press "CTRL + X"
+  - a. Remove the 'quite' flag
+  - b. Add 'console=ttyS0, 115200' #This allows for the Serial Over LAN(SOL) conection from the web interface.
+  - c. Press "CTRL + X"
 
