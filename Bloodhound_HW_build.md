@@ -34,6 +34,6 @@ Once IP address is set through serial BMC login to the web console and set all s
 3. Power on server
 4. Edit the `Install Rocky Linux x.x` selection to add the following:
   - a. Remove the `quite` flag
-  - b. Add `console=ttyS0, 115200` #This allows for the Serial Over LAN(SOL) conection from the web interface.
+  - b. Add `console=ttyS0, 115200` #This allows for the Serial Over LAN(SOL) connection from the web interface.
   - c. Press "CTRL + X"
 
